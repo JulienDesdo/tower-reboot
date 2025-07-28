@@ -5,10 +5,8 @@
 using namespace sf;
 using namespace std;
 
-Input::Input()
+Input::Input() : button{false, false, false, false, false}
 {
-     button.left=button.right=button.echap=false;
-     button.down=button.up=false;
 }
 
 Input::Button Input::GetButton(void) const // return private

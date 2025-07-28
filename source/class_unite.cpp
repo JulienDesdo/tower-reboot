@@ -24,16 +24,17 @@ Unites::Unites(sf::Vector2f newposition, sf::Color color, int player, int lvl)
 
     switch (lvl)
     {
-
-        case 1:
-            attaque=50;
-            PV=200;
-            vitesse = 10.f * num_player;
-
         case 2:
-            attaque=50 * lvl;
-            PV=200 * lvl ;
+            attaque = 50 * lvl;
+            PV = 200 * lvl;
             vitesse = 10.f * lvl * num_player;
+            break;
+        case 1:
+        default:
+            attaque = 50;
+            PV = 200;
+            vitesse = 10.f * num_player;
+            break;
     }
 
 }
